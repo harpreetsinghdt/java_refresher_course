@@ -5,6 +5,9 @@ class OuterClass {
   
  class InnerClass {
       int y = 5;
+      public int myInnerMethod() {
+        return x;
+      }
     }
   }
   
@@ -13,5 +16,6 @@ class OuterClass {
       OuterClass myOuter = new OuterClass();
       OuterClass.InnerClass myInner = myOuter.new InnerClass();
       System.out.println(myInner.y + myOuter.x);
+      System.out.println(myInner.myInnerMethod());
     }
   }
